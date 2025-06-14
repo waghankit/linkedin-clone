@@ -5,7 +5,7 @@ import { authOptions } from '../auth/[...nextauth]/route'
 
 export async function GET() {
   const posts = await prisma.post.findMany({
-    include: { author: true },
+    include: { author: true, comments: { include: { author: true } } },
     orderBy: { createdAt: 'desc' },
   })
   return NextResponse.json(posts)

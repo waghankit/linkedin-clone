@@ -14,19 +14,31 @@ datasource db {
 }
 
 model User {
-  id       String  @id @default(cuid())
-  email    String  @unique
+  id       String    @id @default(cuid())
+  email    String    @unique
   password String
-  name     String?
   posts    Post[]
-  createdAt DateTime @default(now())
+  comments Comment[]  // 👈 User can have many comments
 }
 
 model Post {
+  id        String    @id @default(cuid())
+  content   String
+  createdAt DateTime  @default(now())
+  authorId  String
+  author    User      @relation(fields: [authorId], references: [id])
+  comments  Comment[]
+  likeCount Int       @default(0)
+}
+
+model Comment {
   id        String   @id @default(cuid())
   content   String
   createdAt DateTime @default(now())
   authorId  String
   author    User     @relation(fields: [authorId], references: [id])
+  postId    String
+  post      Post     @relation(fields: [postId], references: [id], onDelete: Cascade)
 }
+
 

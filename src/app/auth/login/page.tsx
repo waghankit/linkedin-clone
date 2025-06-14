@@ -35,7 +35,7 @@ export default function LoginPage() {
         <form onSubmit={handleSubmit} className="space-y-4">
           <Input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
           <Input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-          <Button type="submit" className="w-full">Sign In</Button>
+          <Button type="submit" className="w-full cursor-pointer">Sign In</Button>
         </form>
         <p className="text-center text-sm text-gray-600">
           Don't have an account? <Link href="/auth/register" className="text-blue-600 hover:underline">Sign up</Link>
