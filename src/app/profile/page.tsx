@@ -40,8 +40,8 @@ export default function ProfilePage() {
       if (res.ok) {
         const data = await res.json()
         const userPosts = data
-          .filter((post: any) => post.author.email === session?.user?.email)
-          .map((post: any) => ({ ...post, comments: post.comments || [], likeCount: post.likeCount || 0 }))
+          .filter((post: Post) => post.author.email === session?.user?.email)
+          .map((post: Post) => ({ ...post, comments: post.comments || [], likeCount: post.likeCount || 0 }))
         setPosts(userPosts)
       }
     }

@@ -43,7 +43,7 @@ export default function DashboardPage() {
       const res = await fetch('/api/posts')
       if (res.ok) {
         const data = await res.json()
-        setPosts(data.map((post: any) => ({ ...post, comments: post.comments || [], likeCount: post.likeCount || 0 })))
+        setPosts(data.map((post: Post) => ({ ...post, comments: post.comments || [], likeCount: post.likeCount || 0 })))
       }
     }
     fetchPosts()

@@ -38,7 +38,7 @@ export default function LoginPage() {
           <Button type="submit" className="w-full cursor-pointer">Sign In</Button>
         </form>
         <p className="text-center text-sm text-gray-600">
-          Don't have an account? <Link href="/auth/register" className="text-blue-600 hover:underline">Sign up</Link>
+          Don&apos;t have an account? <Link href="/auth/register" className="text-blue-600 hover:underline">Sign up</Link>
         </p>
       </div>
     </div>
