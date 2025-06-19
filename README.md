@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LinkedIn Clone 🧑‍💼
 
-## Getting Started
+A full-stack LinkedIn clone built with modern technologies to replicate core LinkedIn functionalities including user authentication, posting, commenting, liking, and profile management.
 
-First, run the development server:
+🚀 **Live Demo:** [linkedin-clone-red-one.vercel.app](https://linkedin-clone-red-one.vercel.app/)
 
-```bash
+## 🔧 Tech Stack
+
+- **Frontend:** Next.js 14 (App Router), TypeScript, Tailwind CSS, Shadcn/ui
+- **Backend:** Node.js, Next.js API Routes
+- **Database:** PostgreSQL (hosted on Supabase)
+- **ORM:** Prisma
+- **Authentication:** NextAuth.js (Credentials Provider)
+- **Hosting:** Vercel
+- **Dev Tools:** ESLint, Prettier, ChatGPT, Claude, Cursor
+
+## ✨ Features
+
+- 🔐 Secure login and registration with hashed passwords
+- 🏠 Dashboard to create, view, edit, and delete posts
+- 💬 Commenting and Like functionality per post
+- 👤 Profile page displaying user details and posts
+- 📱 Responsive design with modern UI/UX
+- ☁️ Deployed and production-ready
+
+## 🛠️ Getting Started
+
+### 1. Clone the repository
+git clone https://github.com/yourusername/linkedin-clone.git
+cd linkedin-clone
+
+2. Install dependencies
+npm install
+
+3. Set up environment variables
+Create a .env file based on .env.example:
+
+DATABASE_URL=postgresql://<username>:<password>@<host>:5432/<db>
+NEXTAUTH_SECRET=your-random-secret
+NEXTAUTH_URL=http://localhost:3000
+
+4. Migrate database
+npx prisma migrate dev --name init
+
+6. Run the app
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+🚀 Deployment
+The app is deployed on Vercel. Ensure to set DATABASE_URL, NEXTAUTH_SECRET, and NEXTAUTH_URL in your Vercel dashboard environment variables.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+📁 Folder Structure
+src/app: App Router pages
 
-## Learn More
+src/components: Reusable UI components
 
-To learn more about Next.js, take a look at the following resources:
+src/lib/prisma.ts: Prisma Client instance
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+prisma/schema.prisma: Prisma schema
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+📸 Screenshots
+![Screenshot 2025-06-19 at 4 41 24 PM](https://github.com/user-attachments/assets/e0ea1701-8572-49d5-9c00-230cf9749d22)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+![Screenshot 2025-06-19 at 4 41 14 PM](https://github.com/user-attachments/assets/48553ed3-0331-4205-9f9e-36d750f32d8b)
+
+![Screenshot 2025-06-19 at 4 41 04 PM](https://github.com/user-attachments/assets/b92975b7-0817-4b46-a5f5-e9b05ec04950)
+
+
+🙌 Contributing
+Feel free to fork and contribute. Pull requests are welcome!
